@@ -1,0 +1,38 @@
+﻿@model List<SampleProject.MvcWebUI.Models.EmployeeViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        <table class="table table-bordered table-responsive table-hover">
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Employee Surname</th>
+                    <th>Phone Number</th>
+                    <th>Department Name</th>
+                    <th>Manager Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var employeeList in Model)
+                {
+                    <tr>
+                        <td>@employeeList.FirstName</td>
+                        <td>@employeeList.LastName</td>
+                        <td>@employeeList.Phone</td>
+                        <td>@employeeList.Department.DepartmentName</td>
+                        <td>@employeeList.Manager.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div>
+            @Html.ActionLink("Back to List", "Index", "Home", null, new { @class = "btn btn-warning"})
+        </div>
+    </div>
+</div>
+
+
+
