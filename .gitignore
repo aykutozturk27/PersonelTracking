@@ -360,7 +360,7 @@ MigrationBackup/
 
 SampleProject.MvcWebUI/obj/
 SampleProject.MvcWebUI/bin/
-*.config
+Web.config
 packages/
 # .vs/
 # *.suo
